@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOP BAR */
+.top-bar {
+  height: 60px;
+  background: #020617;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.profile-btn {
+  background: #16a34a;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  right: -320px;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  background: #020617;
+  padding: 20px;
+  transition: 0.3s;
+  z-index: 100;
+  border-left: 1px solid #1e293b;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar input,
+.sidebar select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #020617;
+  border: 1px solid #334155;
+  color: white;
+  border-radius: 6px;
+}
+
+.bmi {
+  margin-top: 10px;
+  background: #16a34a;
+  padding: 10px;
+  border-radius: 6px;
+  color: black;
+}
+
+/* CHAT */
+.chat {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.message.user {
+  flex-direction: row-reverse;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.bubble {
+  max-width: 70%;
+  margin: 0 10px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #020617;
+  border: 1px solid #334155;
+}
+
+.message.user .bubble {
+  background: #16a34a;
+  color: black;
+}
+
+/* INPUT */
+.input-box {
+  display: flex;
+  padding: 15px;
+  background: #020617;
+  border-top: 1px solid #1e293b;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.input-box button {
+  margin-left: 10px;
+  background: #16a34a;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.typing {
+  opacity: 0.6;
+}
